@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: hasura
+  data: null
+  kubeContext: h34-archduke43-stg
+  name: h34-archduke43-stg

@@ -1,0 +1,52 @@
+apiVersion: v1
+items:
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: dash
+      hasuraService: custom
+    name: dash
+    namespace: '{{ cluster.metadata.namespaces.user }}'
+  spec:
+    replicas: 1
+    strategy: {}
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: dash
+      spec:
+        containers:
+        - image: hasura/base-git-image:0.7
+          imagePullPolicy: IfNotPresent
+          name: dash
+          ports:
+          - containerPort: 8050
+            protocol: TCP
+          resources: {}
+        securityContext: {}
+        terminationGracePeriodSeconds: 0
+  status: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: dash
+      hasuraService: custom
+    name: dash
+    namespace: '{{ cluster.metadata.namespaces.user }}'
+  spec:
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8050
+    selector:
+      app: dash
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata: {}
