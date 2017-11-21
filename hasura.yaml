@@ -1,4 +1,4 @@
-description: Blank template for a Hasura project
+description: A simple python app using plot.ly dash framework
 keywords: base, getting-started
-name: base
+name: base-python-dash
 platformVersion: v0.15.3

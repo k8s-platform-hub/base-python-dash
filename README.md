@@ -2,7 +2,7 @@
 
 A simple python app using the dash framework. Written on top of Flask, Plotly.js, and React.js, Dash is ideal for building data visualization apps with highly custom user interfaces in pure Python. It's particuarly suited for anyone who works with data in Python.
 
-# Quickstart Instructions
+# Deploy this project
 
 ```sh
 $ hasura quickstart hasura/base-python-dash
