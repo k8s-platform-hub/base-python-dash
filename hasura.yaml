@@ -1,4 +1,5 @@
 description: A simple python app using plot.ly dash framework
-keywords: base, getting-started
+keywords: base, getting-started, python, dash, plotly
+media: {}
 name: base-python-dash
 platformVersion: v0.15.3
